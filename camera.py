@@ -7,7 +7,7 @@ frame_queue = queue.Queue(maxsize=2)
 
 # Define a function that captures frames from the camera and stores them in the queue
 def capture_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
     while True:
         ret, frame = cap.read()
         if not ret:

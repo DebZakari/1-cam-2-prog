@@ -5,7 +5,7 @@ import queue
 frame_queue = queue.Queue(maxsize=2)
 
 # Open the camera feed
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 while True:
     # Read a frame from the camera
